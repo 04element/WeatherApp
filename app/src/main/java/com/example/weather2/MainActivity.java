@@ -102,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
     //통신 실패시 AlertDialog 표시하는 메소드
     private void showFailPop(){
         AlertDialog.Builder builder =  new AlertDialog.Builder(this);
+        builder.setTitle("통신 실패");
+        builder.setMessage("API를 불러 오는 것을 실패하였습니다.");
 
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
@@ -109,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "OK Click", Toast.LENGTH_SHORT).show();
             }
         });
-
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
